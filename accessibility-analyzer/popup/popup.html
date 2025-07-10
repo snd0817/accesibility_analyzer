@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Accessibility Analyzer</h1>
+    
+    <div class="scan-section">
+      <button id="scanButton" class="scan-btn">
+        <span class="scan-icon">🔍</span>
+        Scan Current Page
+      </button>
+      <div id="loadingIndicator" class="loading hidden">Analyzing...</div>
+    </div>
+
+    <div id="results" class="results hidden">
+      <div class="summary">
+        <h3>Scan Results</h3>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number" id="totalIssues">0</span>
+            <span class="stat-label">Total Issues</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number critical" id="criticalIssues">0</span>
+            <span class="stat-label">Critical</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number warning" id="warningIssues">0</span>
+            <span class="stat-label">Warnings</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issues-list" id="issuesList"></div>
+      
+      <div class="actions">
+        <button id="highlightButton" class="action-btn">Highlight Issues</button>
+        <button id="exportButton" class="action-btn">Export Report</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
